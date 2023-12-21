@@ -52,5 +52,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "One of the integers is empty", Toast.LENGTH_LONG).show();
         }
+        TextView tvRes = findViewById(R.id.tvResult);
+        if (result != null) {
+            tvRes.setText(result.toString());
+        }
+        else {
+            tvRes.setText("");
+        }
+
     }
 }
