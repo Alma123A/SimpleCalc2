@@ -11,7 +11,7 @@
         android:id="@+id/Num1"
         android:layout_width="158dp"
         android:layout_height="90dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="228dp"
         android:ems="10"
         android:gravity="center"
@@ -26,7 +26,7 @@
         android:id="@+id/Num2"
         android:layout_width="173dp"
         android:layout_height="88dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="numberSigned"
@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="+"
+        android:onClick="onBtnClicked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,19 +54,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
+        android:onClick="onBtnClicked"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnPlus"
+        app:layout_constraintStart_toEndOf="@+id/btnPlus"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="357dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnPlus"
-        app:layout_constraintStart_toEndOf="@+id/btnPlus"/>
+        tools:layout_editor_absoluteY="357dp" />
 
 
     <Button
         android:id="@+id/btnDiv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="4dp"
         android:text="/"
+        android:onClick="onBtnClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnPlus"
         app:layout_constraintTop_toBottomOf="@+id/Num1"
@@ -77,22 +80,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="453dp"
+        android:onClick="onBtnClicked"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnMinus"
-        app:layout_constraintStart_toEndOf="@+id/btnMinus"/>
+        app:layout_constraintStart_toEndOf="@+id/btnMinus" />
 
     <TextView
         android:id="@+id/tvResult"
-        android:layout_width="207dp"
+        android:layout_width="400dp"
         android:layout_height="64dp"
-        android:layout_marginStart="32dp"
         android:gravity="center"
         android:textColor="#673AB7"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMult"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.71" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
